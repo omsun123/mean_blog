@@ -8,13 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  searchTerm = '';
+  
   isCollapsed = true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+
+  }
 
   get token() {
-    return localStorage.getItem('token');
+   return localStorage.getItem('token');
   }
 
   collapse() {
@@ -30,5 +32,5 @@ export class AppComponent {
     this.router.navigate(['']);
   }
 
-  search() {}
+  
 }
